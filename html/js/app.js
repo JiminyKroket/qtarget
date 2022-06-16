@@ -5,7 +5,7 @@ function main(){
         target: [],
         executeTarget(id){
             if(this.target[id]){
-                postData(`selectTarget`, id + 1).then(data => {
+                postData(`selectTarget`, parseInt(id) + 1).then(data => {
                     if (data.status == 'success') {
                         this.display = false;
                     }
